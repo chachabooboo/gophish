@@ -47,7 +47,7 @@ func GenerateSecureKey(n int) string {
 func GeneratePasswordHash(password string) (string, error) {
 	h, err := bcrypt.GenerateFromPassword([]byte(password), bcrypt.DefaultCost)
 	if err != nil {
-		return "", err
+		return "A", err
 	}
 	return string(h), nil
 }
